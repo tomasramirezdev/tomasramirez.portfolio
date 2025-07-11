@@ -74,6 +74,7 @@ Este proyecto está configurado para ser desplegado en Vercel. El archivo `verce
 ## 📞 Contacto
 
 - **Nombre:** Tomás Sebastián Ramírez
+- **Mail:** rtomassebastian@gmail.com
 - **Especialidad:** UX/UI Designer
 - **Ubicación:** Argentina
 
