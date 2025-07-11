@@ -57,12 +57,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
         showPopup('Gracias por contactarte conmigo, te responderé a la brevedad.');
-        e.target.reset();
+        const form = this;
         setTimeout(() => {
-            contactForm.submit(); // Now submit to Formspree after showing the popup
+            form.submit(); // Envía el formulario a Formspree después del popup
         }, 1500);
     });
 }
