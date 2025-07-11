@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-backup",
+  "version": "1.0.0",
+  "description": "Tomás UX/UI Designer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "start": "npx http-server -p 3000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["portfolio", "ux", "ui", "design"],
+  "author": "Tomás Sebastián Ramírez",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 
