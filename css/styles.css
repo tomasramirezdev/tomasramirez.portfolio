@@ -957,3 +957,34 @@ section {
         font-size: 0.8rem;
     }
 }
+
+a.logo,
+a.logo:visited,
+a.logo:active,
+a.logo:focus,
+a.logo:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+a.logo::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+a.logo:hover::before {
+    width: 100%;
+}
