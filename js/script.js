@@ -55,11 +55,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Form submission
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thanks for reaching out! I\'ll get back to you soon.');
-    e.target.reset();
-});
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showPopup('Gracias por contactarte conmigo, te responderé a la brevedad.');
+        e.target.reset();
+        setTimeout(() => {
+            contactForm.submit(); // Now submit to Formspree after showing the popup
+        }, 1500);
+    });
+}
+
+function showPopup(message) {
+    let popup = document.createElement('div');
+    popup.className = 'custom-popup';
+    popup.textContent = message;
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        popup.classList.add('visible');
+    }, 10);
+    setTimeout(() => {
+        popup.classList.remove('visible');
+        setTimeout(() => popup.remove(), 400);
+    }, 2000);
+}
 
 // Parallax effect for floating elements
 window.addEventListener('scroll', () => {

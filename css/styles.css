@@ -87,10 +87,39 @@ nav {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.logo:visited {
+    color: #fff;
+}
+
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.logo:hover::before {
+    width: 100%;
 }
 
 .logo::after {
@@ -775,6 +804,29 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(20, 20, 20, 0.98);
+    color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 0.4s, transform 0.4s;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.custom-popup.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Responsive */
